@@ -11,20 +11,26 @@ const JobApplyForm = () => {
   const handleCvChange = (e) => setCv(e.target.files[0]);
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const user = JSON.parse(localStorage.getItem("user"));
+    const { access, refresh } = JSON.parse(localStorage.getItem("authTokens"));
+    const date = new Date();
+    console.log(access)
 
     const formData = new FormData();
-    formData.append("job_id", id);
-    formData.append("user_id", user.id);
+    formData.append("job", id);
+    // formData.append("applicant", access);
     formData.append("cover_letter", cover_letter);
     formData.append("cv", cv);
+    formData.append("applied_at", date);
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/api/jobs/${id}/apply`,
+        `http://127.0.0.1:8000/api/applications/`,
         {
           method: "POST",
           body: formData,
+          headers: {
+            "Authorization": `Bearer ${access}`
+          }
         }
       );
     } catch (error) {

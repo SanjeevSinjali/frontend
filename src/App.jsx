@@ -19,23 +19,23 @@ const App = () => {
 
   const isNavigationHidden = hideNavigation.includes(location.pathname);
   return (
-    <div className="flex flex-col h-screen min-h-screen">
+    <div className="flex flex-col min-h-screen">
       {isNavigationHidden ? "" : <Navbar />}
-      <div className="flex-grow flex items-center justify-center mt-16">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/jobs" element={<Jobs />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/dashboard" element={<Employer />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/job-details/:id" element={<JobDetails />} />
-          <Route path="/create-job" element={<CreateJob />} />
-          <Route path="/job-details/:id/apply" element={<JobApplyForm />} />
-        </Routes>
-      </div>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/jobs" element={<Jobs />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/dashboard" element={<Employer />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/job-details/:id" element={<JobDetails />} />
+        <Route path="/create-job" element={<CreateJob />} />
+        <Route path="/job-details/:id/apply" element={<JobApplyForm />} />
+      </Routes>
+
       {isNavigationHidden ? "" : <Footer />}
     </div>
   );
