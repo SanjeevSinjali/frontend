@@ -13,6 +13,7 @@ import { ProfileSettingsForm } from "./ProfileSettingsForm";
 import DashboardLayout from "./DashboardLayout";
 import JobDetails from "./JobDetails";
 import CreateNewJobForm from "./CreateNewJobForm";
+import JobApplyForm from "./JobApplyForm";
 
 
-export { Navbar, Button, JobCategory, PopularJob, TeamMember, Footer, JobCard, ReviewCard, Carousel, AppSidebar, AllJobsTable, ProfileSettingsForm, DashboardLayout, JobDetails, CreateNewJobForm};
+export { Navbar, Button, JobCategory, PopularJob, TeamMember, Footer, JobCard, ReviewCard, Carousel, AppSidebar, AllJobsTable, ProfileSettingsForm, DashboardLayout, JobDetails, CreateNewJobForm, JobApplyForm};

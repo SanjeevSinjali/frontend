@@ -45,7 +45,7 @@ const Home = () => {
   return (
     <div className="bg-mainColor w-full">
       {/* Hero Section */}
-      <main className="max-w-7xl m-auto px-5 flex flex-col justify-center lg:flex-row lg:justify-between items-center gap-2 md:gap-10 min-h-screen md:max-h-screen">
+      <main className="max-w-7xl m-auto px-5 py-8 flex flex-col justify-center lg:flex-row lg:justify-between items-center gap-2 md:gap-10 min-h-screen lg:max-h-screen mt-10">
         {/* Left Side */}
         <div className="flex justify-between items-center gap-20 my-8">
           <div className="flex flex-col gap-5">
@@ -184,7 +184,7 @@ const Home = () => {
             />
           </div>
           <div className="flex items-start w-full">
-            <Link to="#">
+            <Link to="/jobs">
               <div className="bg-mainColor px-4 py-2 text-white rounded">
                 More Jobs ...
               </div>

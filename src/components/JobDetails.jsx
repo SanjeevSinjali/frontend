@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Button } from "./ui/button";
 
 const JobDetails = () => {
@@ -43,14 +43,13 @@ const JobDetails = () => {
 
   const applyJob = () => {
     const user = localStorage.getItem(user) || "1";
-    
   };
   return (
-    <section className="bg-lightBg pt-32 pb-20">
-      <div className="job-details max-w-7xl m-auto px-5 ">
+    <section className="bg-lightColor pt-32 pb-20">
+      <div className="job-details max-w-7xl m-auto px-6 flex flex-col gap-8 bg-lightBg items-center justify-center w-fit py-8 rounded-xl">
         <h1 className="heading text-2xl font-bold mb-4">Job Details</h1>
 
-        <div className="details space-y-6">
+        <div className="details space-y-6 flex flex-col">
           {/* Job Info */}
           <div className="job-info flex items-center space-x-4">
             <img
@@ -181,11 +180,12 @@ const JobDetails = () => {
           </div> */}
 
           {/* Apply Form */}
-          <Button 
-          onClick={applyJob}
-          className="btn bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">
+          <Link
+            to={`/job-details/${id}/apply`}
+            className="btn bg-mainColor text-white py-2 px-4 rounded hover:bg-hoverColor my-8 w-fit"
+          >
             Apply Now
-          </Button>
+          </Link>
           {/* <button
               type="submit"
               className="save flex items-center space-x-2 text-blue-600 border border-blue-600 py-2 px-4 rounded hover:bg-blue-50"

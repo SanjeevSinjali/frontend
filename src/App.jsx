@@ -9,7 +9,7 @@ import {
   Profile,
   CreateJob,
 } from "./pages";
-import { Footer, JobDetails, Navbar } from "./components";
+import { Footer, JobDetails, Navbar, JobApplyForm } from "./components";
 import { Route, Routes, useLocation } from "react-router-dom";
 
 const App = () => {
@@ -19,8 +19,9 @@ const App = () => {
 
   const isNavigationHidden = hideNavigation.includes(location.pathname);
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col min-h-screen">
       {isNavigationHidden ? "" : <Navbar />}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -32,7 +33,9 @@ const App = () => {
         <Route path="/profile" element={<Profile />} />
         <Route path="/job-details/:id" element={<JobDetails />} />
         <Route path="/create-job" element={<CreateJob />} />
+        <Route path="/job-details/:id/apply" element={<JobApplyForm />} />
       </Routes>
+
       {isNavigationHidden ? "" : <Footer />}
     </div>
   );
