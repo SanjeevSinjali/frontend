@@ -14,6 +14,7 @@ import DashboardLayout from "./DashboardLayout";
 import JobDetails from "./JobDetails";
 import CreateNewJobForm from "./CreateNewJobForm";
 import JobApplyForm from "./JobApplyForm";
+import AppliedJobsTable from "./AppliedJobsTable";
 
 
-export { Navbar, Button, JobCategory, PopularJob, TeamMember, Footer, JobCard, ReviewCard, Carousel, AppSidebar, AllJobsTable, ProfileSettingsForm, DashboardLayout, JobDetails, CreateNewJobForm, JobApplyForm};
+export { Navbar, Button, JobCategory, PopularJob, TeamMember, Footer, JobCard, ReviewCard, Carousel, AppSidebar, AllJobsTable, ProfileSettingsForm, DashboardLayout, JobDetails, CreateNewJobForm, JobApplyForm, AppliedJobsTable};

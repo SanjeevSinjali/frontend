@@ -7,5 +7,7 @@ import Register from "./Register";
 import Employer from "./Employer";
 import Profile from "./Profile";
 import CreateJob from "./CreateJob";
+import UserProfile from "./UserProfile";
+import AppliedJobs from "./AppliedJobs";
 
-export { Home, About, Contact, Jobs, Login, Register, Employer, Profile, CreateJob };
+export { Home, About, Contact, Jobs, Login, Register, Employer, Profile, CreateJob, UserProfile, AppliedJobs };
