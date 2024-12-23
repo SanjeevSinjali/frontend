@@ -8,6 +8,8 @@ import {
   Register,
   Profile,
   CreateJob,
+  UserProfile,
+  AppliedJobs,
 } from "./pages";
 import { Footer, JobDetails, Navbar, JobApplyForm } from "./components";
 import { Route, Routes, useLocation } from "react-router-dom";
@@ -34,6 +36,8 @@ const App = () => {
         <Route path="/job-details/:id" element={<JobDetails />} />
         <Route path="/create-job" element={<CreateJob />} />
         <Route path="/job-details/:id/apply" element={<JobApplyForm />} />
+        <Route path="/:id/settings" element={<UserProfile />} />
+        <Route path="/:id/applied-jobs" element={<AppliedJobs />} />
       </Routes>
 
       {isNavigationHidden ? "" : <Footer />}
